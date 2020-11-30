@@ -47,4 +47,9 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:1.16.18"
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
+    // naver login
+    implementation('com.naver.nid:naveridlogin-android-sdk:4.2.6')
+    // Circle imgeview
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

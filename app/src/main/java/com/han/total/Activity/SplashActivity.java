@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.han.total.Interface.DelayCallback;
 import com.han.total.R;
@@ -25,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         Util.getInstance(mContext).DelayCallback(1000, new DelayCallback() {
             @Override
             public void DoSomething() {
-                Intent mIntent = new Intent(mContext,MainActivity.class);
+                Intent mIntent = new Intent(mContext, LoginActivity.class);
                 startActivity(mIntent);
             }
         });
