@@ -30,14 +30,36 @@ public class TemplateAdapter extends RecyclerView.Adapter<TemplateAdapter.ViewHo
 
     // 아이템 뷰를 저장하는 뷰홀더 클래스.
     public class ViewHolder extends RecyclerView.ViewHolder{
-        TextView textView1 ;
-        ImageView imageView;
+        ImageView iv_img0 ;
+        ImageView iv_img1;
+        ImageView iv_img2;
         ViewHolder(View itemView) {
             super(itemView) ;
-            textView1 = itemView.findViewById(R.id.tv_text) ;
-            imageView = itemView.findViewById(R.id.iv_src);
+            iv_img0 = itemView.findViewById(R.id.iv_img0) ;
+            iv_img1 = itemView.findViewById(R.id.iv_img1);
+            iv_img2 = itemView.findViewById(R.id.iv_img2);
 
-            textView1.setOnClickListener(new View.OnClickListener() {
+            iv_img0.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mAdapterCallback != null) {
+                        Logg.e(Global.USER_HTJ,"mSelectedIndex: "+getLayoutPosition());
+                        mAdapterCallback.DoSomeThing(getLayoutPosition());
+                    }
+                }
+            });
+
+            iv_img1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (mAdapterCallback != null) {
+                        Logg.e(Global.USER_HTJ,"mSelectedIndex: "+getLayoutPosition());
+                        mAdapterCallback.DoSomeThing(getLayoutPosition());
+                    }
+                }
+            });
+
+            iv_img2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (mAdapterCallback != null) {
@@ -62,7 +84,7 @@ public class TemplateAdapter extends RecyclerView.Adapter<TemplateAdapter.ViewHo
     @Override
     public void onBindViewHolder(TemplateAdapter.ViewHolder holder, int position) {
         String text = mData.get(position) ;
-        holder.textView1.setText(text) ;
+        //holder.textView1.setText(text) ;
     }
 
     @Override

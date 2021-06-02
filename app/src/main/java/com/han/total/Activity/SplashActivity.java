@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
         Util.getInstance(mContext).DelayCallback(1000, new DelayCallback() {
             @Override
             public void DoSomething() {
-                Intent mIntent = new Intent(mContext, LoginActivity.class);
-                startActivity(mIntent);
+                //Intent mIntent = new Intent(mContext, LoginActivity.class);
+                //startActivity(mIntent);
             }
         });
     }
